@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/shrine_pink_100</item>
+        <item name="colorAccent">@color/shrine_pink_900</item>
+
+    </style>
+
+    <color name="shrine_pink_100">#FEDBD0</color>
+    <color name="shrine_pink_900">#442c2e</color>
+
+</resources>
