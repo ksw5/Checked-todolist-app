@@ -1,11 +1,9 @@
 package com.example.tasktracker
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_create_task.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.collections.mutableListOf as mutableListOf1
 
@@ -29,12 +27,9 @@ class MainActivity : AppCompatActivity() {
         rvTasks.layoutManager = LinearLayoutManager(this)
         // That's all!
 
-        deleteAll.setOnClickListener {
-            DataObject.deleteAll()
-        }
+        // floating action button click will launch activity create task
 
-        /*tasksRecyclerView.adapter = Adapter(DataObject.getAllData())
-        tasksRecyclerView.layoutManager = LinearLayoutManager(this)*/
+
     }
 
 }
