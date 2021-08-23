@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.App" parent="Theme.MaterialComponents.DayNight">
-        <item name="colorPrimary">@color/shrine_pink_100</item>
-        <item name="colorAccent">@color/shrine_pink_900</item>
+        <item name="colorPrimary">@color/indigo_main</item>
+        <item name="colorAccent">@color/blue_main</item>
 
     </style>
 
-    <color name="shrine_pink_100">#FEDBD0</color>
-    <color name="shrine_pink_900">#442c2e</color>
+    <color name="indigo_main">#9fa8da</color>
+    <color name="indigo_light">#d1d9ff</color>
+    <color name="indigo_dark">#6f79a8</color>
+    <color name="deep_purple">#4527a0</color>
+    <color name="deep_purple_light">#7953d2</color>
+    <color name="deep_purple_dark">#000070</color>
+    <color name="blue_main">#0d47a1</color>
+    <color name="blue_dark">#002171</color>
 
 </resources>
