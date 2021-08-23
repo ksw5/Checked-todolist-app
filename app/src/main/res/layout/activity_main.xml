@@ -31,7 +31,7 @@
             android:textSize="40sp"
             android:textStyle="bold" />
 
-        
+
     </LinearLayout>
 
     <FrameLayout
@@ -41,15 +41,25 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasksRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="467dp"
+            android:layout_height="447dp"
             android:isScrollContainer="true"
-            tools:listitem="@layout/view" />
+            tools:listitem="@layout/view">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <EditText
+            android:id="@+id/userTask"
+            android:layout_width="311dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|left"
+            android:layout_margin="16dp"
+            android:hint="Enter A Task"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom"
+            android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
             android:contentDescription="@string/submit"
             app:backgroundTint="@color/blue_main"
@@ -60,6 +70,8 @@
             app:layout_constraintVertical_bias="0.906"
             app:rippleColor="#2F2E32"
             app:srcCompat="@drawable/ic_baseline_add_24" />
+
+
     </FrameLayout>
 
 

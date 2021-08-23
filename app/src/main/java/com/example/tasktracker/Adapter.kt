@@ -3,10 +3,11 @@ package com.example.tasktracker
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class Adapter(private val listOfItems: List<String>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(private val listOfItems: MutableList<Task>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
@@ -19,8 +20,9 @@ class Adapter(private val listOfItems: List<String>) : RecyclerView.Adapter<Adap
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = listOfItems.get(position)
-        holder.textView.text = item
+        val task: Task = listOfItems.get(position)
+        holder.title.text = task.title.toString()
+
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +32,7 @@ class Adapter(private val listOfItems: List<String>) : RecyclerView.Adapter<Adap
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Your holder should contain and initialize a member variable
         // for any view that will be set as you render a row
-        val textView = itemView.findViewById<TextView>(R.id.title)
+        val title: TextView = itemView.findViewById<EditText>(R.id.title)
 
     }
 

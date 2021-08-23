@@ -1,11 +1,10 @@
 package com.example.tasktracker
 
 import android.os.Bundle
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.collections.mutableListOf as mutableListOf1
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,22 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Initialize data
-        // Lookup the recyclerview in activity layout
-        val rvTasks = findViewById<RecyclerView>(R.id.tasksRecyclerView)
-
-        // Create adapter passing in the sample user data
-        val listOfItems = mutableListOf1<String>()
-        // Attach the adapter to the recyclerview to populate items
+        val rv = findViewById<RecyclerView>(R.id.tasksRecyclerView)
+        val listOfItems = mutableListOf<Task>()
         val adapter = Adapter(listOfItems)
-        rvTasks.adapter = adapter
-        // Set layout manager to position the items
-        rvTasks.layoutManager = LinearLayoutManager(this)
-        // That's all!
-
-        // floating action button click will launch activity create task
-
-
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            val stringForTask = findViewById<EditText>(R.id.userTask)
+            listOfItems.add(Task(stringForTask))
+        }
+        adapter.notifyDataSetChanged()
     }
 
 }
