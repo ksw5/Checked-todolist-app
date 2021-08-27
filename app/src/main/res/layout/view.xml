@@ -29,6 +29,13 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
+
+           <!-- <ImageView
+                android:id="@+id/drag_icon"
+                android:layout_width="50dp"
+                android:layout_height="47dp"
+                app:srcCompat="@drawable/ic_drag" />-->
+
         </LinearLayout>
    </androidx.cardview.widget.CardView>
 </LinearLayout>
