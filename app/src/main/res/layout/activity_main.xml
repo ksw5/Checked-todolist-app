@@ -41,7 +41,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasksRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="447dp"
+            android:layout_height="326dp"
             android:isScrollContainer="true"
             tools:listitem="@layout/view">
 
