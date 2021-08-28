@@ -3,6 +3,7 @@ package com.example.tasktracker
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -26,6 +27,19 @@ class MainActivity : AppCompatActivity() {
             userTask.getText().clear()
             adapter.notifyDataSetChanged()
         }
+
+        // Swipe to delete
+        val swipeToDeleteCallBack = object : SwipeToDeleteCallBack() {
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+               val position = viewHolder.adapterPosition
+                listOfItems.removeAt(position)
+                adapter.notifyItemRemoved(position)
+            }
+        }
+
+        val itemTouchHelper = ItemTouchHelper(swipeToDeleteCallBack)
+
+        itemTouchHelper.attachToRecyclerView(rv)
 
 
     }
