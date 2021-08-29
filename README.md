@@ -1,23 +1,23 @@
 # CHECKED: A ToDo List App with Swipe to Delete
 ![Picture](checkedapp.png)
 
-## Table of Contents 📑
-* [General Info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
+## 📑 Table of Contents
+* [General Info](#-general-info)
+* [Technologies](#-technologies)
+* [Setup](#-setup)
 
-## General Info ℹ️
+## 💁 General Info
 This app let's users add a task to the interface, then swipe to delete once task is completed.
 ### Features
 * RecyclerView
 * ItemTouchHelper
 * Material Design
 
-## Technologies 🧰
+## 🧰 Technologies
 * Android Studio
 * Kotlin
 
-## Setup 🔑
+## 🔑 Setup
 ```
 Download Android Studio
 Download file and open in Android Studio
