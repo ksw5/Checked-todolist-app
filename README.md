@@ -8,7 +8,7 @@
 
 ## 💁 General Info
 This app let's users add a task to the interface, then swipe to delete once task is completed.
-### Features
+### Android Technologies used to make this project
 * RecyclerView
 * ItemTouchHelper
 * Material Design
